@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="top_trend_form_view" model="ir.ui.view">
+            <field name="name">top_trend_form</field>
+            <field name="model">top.trend</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                           
+                            <h1>
+                                <label for="name"/>
+                                <field name="name" placeholder="tên sản phẩm"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="link"/>
+                            <field name="price"/>
+                            <field name="out_stock_month"/>
+                            <field name="out_stock"/>  
+                            <field name="seen"/>    
+                            <field name="type"/>     
+                            <field name="like"/>         
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="top_trend_tree_view" model="ir.ui.view">
+            <field name="name">top_trend_tree</field>
+            <field name="model">top.trend</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <header>
+                        <button string="Predict Data" name="train_data" type="object"/>
+                    </header>                  
+                    <field name="name"/>
+                    <field name="link"/>
+                    <field name="price"/>
+                    <field name="out_stock_month"/>
+                    <field name="out_stock"/>
+                    <field name="seen"/>    
+                    <field name="type"/>
+                    <field name="like"/>  
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>
